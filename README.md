@@ -1,4 +1,4 @@
-# 🏦 Loan & Credit Risk Management System
+# 🏦 Lend_Logic
 
 ## 📌 Overview
 A full-stack banking-based web application built using Flask and MySQL.
@@ -40,4 +40,5 @@ EMI must be less than 40% of monthly income.
 Aditi Chaudhari
 
 ## 💼 Project Type
+
 Full-stack Financial Application (FinTech Simulation)
