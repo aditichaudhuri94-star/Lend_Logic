@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h2 class="mb-4">Admin Dashboard</h2>
+
+<div class="row mb-4">
+    <div class="col-md-4">
+        <div class="dashboard-card">
+            <h5>Total Applications</h5>
+            <h3>{{ total }}</h3>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="dashboard-card">
+            <h5>Eligible</h5>
+            <h3>{{ approved }}</h3>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="dashboard-card">
+            <h5>Not Eligible</h5>
+            <h3>{{ rejected }}</h3>
+        </div>
+    </div>
+</div>
+
+<table class="table table-bordered">
+<tr>
+    <th>ID</th>
+    <th>User ID</th>
+    <th>Principal</th>
+    <th>EMI</th>
+    <th>Status</th>
+</tr>
+
+{% for loan in loans %}
+<tr>
+    <td>{{ loan.id }}</td>
+    <td>{{ loan.user_id }}</td>
+    <td>{{ loan.principal }}</td>
+    <td>{{ loan.emi }}</td>
+    <td>{{ loan.eligibility }}</td>
+</tr>
+{% endfor %}
+</table>
+
+{% endblock %}

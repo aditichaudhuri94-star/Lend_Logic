@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block content %}
+<h3>EMI: {{ emi }}</h3>
+<h4>Total Payment: {{ total }}</h4>
+<h4>Status: {{ eligibility }}</h4>
+
+<table class="table">
+<tr>
+    <th>Month</th>
+    <th>Interest</th>
+    <th>Principal</th>
+    <th>Balance</th>
+</tr>
+{% for row in schedule %}
+<tr>
+    <td>{{ row.month }}</td>
+    <td>{{ row.interest }}</td>
+    <td>{{ row.principal }}</td>
+    <td>{{ row.balance }}</td>
+</tr>
+{% endfor %}
+</table>
+{% endblock %}

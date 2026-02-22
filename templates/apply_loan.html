@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Apply Loan</h2>
+<form method="POST">
+    <input class="form-control mb-2" type="number" name="principal" placeholder="Loan Amount" required>
+    <input class="form-control mb-2" type="number" name="rate" placeholder="Interest Rate (%)" required>
+    <input class="form-control mb-2" type="number" name="tenure" placeholder="Tenure (Years)" required>
+    <input class="form-control mb-2" type="number" name="income" placeholder="Monthly Income" required>
+    <button class="btn btn-primary">Calculate</button>
+</form>
+{% endblock %}
